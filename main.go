@@ -27,7 +27,7 @@ func main() {
 	numGoroutines := 4
 	wg.Add(numGoroutines)
 
-	for i := range numGoroutines {
+	for i := 0; i < numGoroutines; i++ {
 		start := i * n / numGoroutines
 		end := (i + 1) * n / numGoroutines
 		if i == numGoroutines-1 {
